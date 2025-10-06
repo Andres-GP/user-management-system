@@ -6,13 +6,7 @@ A full-featured web application to manage users: create, view, edit, and delete 
 
 ## Demo
 
-Check the live demo here: [User Management System](https://your-app.onrender.com)
-
-![Home Page](./screenshots/home.png)
-![Edit User](./screenshots/edit-user.png)
-![View User](./screenshots/view-user.png)
-
----
+## Check the live demo here: [User Management System](https://user-management-system-8r1h.onrender.com/)
 
 ## Technologies Used
 
