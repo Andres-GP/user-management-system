@@ -1,0 +1,47 @@
+<div class="header-row">
+  <h1>Users</h1>
+  <a href="/adduser" class="btn primary btn-no-link">
+    <i class="fa-solid fa-plus"></i>
+    New User
+  </a>
+</div>
+
+{{#if alert}}
+  <div class="alert success">{{alert}}</div>
+{{/if}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+      <tr>
+        <td>{{this.first_name}} {{this.last_name}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.phone}}</td>
+        <td class="actions">
+          <a href="/viewuser/{{this.id}}" class="icon-btn" title="View">
+            <i class="fa-regular fa-eye"></i>
+          </a>
+          <a href="/edituser/{{this.id}}" class="icon-btn" title="Edit">
+            <i class="fa-regular fa-pen-to-square"></i>
+          </a>
+          <a
+            href="/delete/{{this.id}}"
+            class="icon-btn danger"
+            title="Delete"
+            onclick="return confirm('Delete this user?');"
+          >
+            <i class="fa-regular fa-trash-can"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

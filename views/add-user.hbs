@@ -1,0 +1,12 @@
+<nav class="breadcrumb">
+  <a href="/">Home</a> / <span>New User</span>
+</nav>
+
+{{#if alert}}
+  <div class="alert {{alertType}}">{{alert}}</div>
+{{/if}}
+
+
+<form method="POST" action="/adduser" validate>
+  {{> user-form}}
+</form>

@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Management System</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-logo" href="/">
+          <i class="fa-solid fa-users"></i>
+          <span>UMS</span>
+        </a>
+
+        <form class="search-form" method="POST" action="/" novalidate>
+          <input
+            type="search"
+            placeholder="Search users..."
+            name="search"
+            aria-label="Search"
+          />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <main class="container main-content">
+      {{{body}}}
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 <strong>UMS</strong> — Built with Express</p>
+    </footer>
+  </body>
+</html>

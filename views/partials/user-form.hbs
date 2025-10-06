@@ -1,0 +1,51 @@
+<div class="form-row">
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <input
+      type="text"
+      id="first_name"
+      name="first_name"
+      value="{{this.first_name}}"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input
+      type="text"
+      id="last_name"
+      name="last_name"
+      value="{{this.last_name}}"
+      required
+    />
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      value="{{this.email}}"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" value="{{this.phone}}" required />
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="comments">Comments (optional)</label>
+  <textarea id="comments" name="comments">{{this.comments}}</textarea>
+</div>
+
+<button type="submit" class="btn primary w-full">
+  <i class="fa-solid fa-check"></i>
+  Submit
+</button>
