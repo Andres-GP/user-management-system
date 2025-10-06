@@ -1,14 +1,14 @@
+const path = require("path");
 const isProd = process.env.NODE_ENV === "production";
 let db;
 
 if (isProd) {
   const sqlite3 = require("sqlite3").verbose();
-  const path = require("path");
-  const dbPath = path.resolve(__dirname, "database.sqlite");
+  const dbPath = path.resolve(__dirname, "../database.sqlite");
 
   db = new sqlite3.Database(dbPath, (err) => {
     if (err) console.error("SQLite connection error:", err);
-    else console.log("Connected to SQLite DB");
+    else console.log("Connected to SQLite DB at", dbPath);
   });
 
   db.query = (sql, params = []) =>
