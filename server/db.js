@@ -1,14 +1,33 @@
-const mysql = require("mysql2");
-const sqlite3 = require("sqlite3").verbose();
-
+const isProd = process.env.NODE_ENV === "production";
 let db;
 
-if (process.env.NODE_ENV === "production") {
-  db = new sqlite3.Database("./database.sqlite", (err) => {
+if (isProd) {
+  const sqlite3 = require("sqlite3").verbose();
+  const path = require("path");
+  const dbPath = path.resolve(__dirname, "database.sqlite");
+
+  db = new sqlite3.Database(dbPath, (err) => {
     if (err) console.error("SQLite connection error:", err);
     else console.log("Connected to SQLite DB");
   });
+
+  db.query = (sql, params = []) =>
+    new Promise((resolve, reject) => {
+      db.all(sql, params, (err, rows) => {
+        if (err) reject(err);
+        else resolve([rows]);
+      });
+    });
+
+  db.runAsync = (sql, params = []) =>
+    new Promise((resolve, reject) => {
+      db.run(sql, params, function (err) {
+        if (err) reject(err);
+        else resolve(this);
+      });
+    });
 } else {
+  const mysql = require("mysql2");
   db = mysql
     .createPool({
       connectionLimit: 100,
@@ -19,12 +38,6 @@ if (process.env.NODE_ENV === "production") {
       port: process.env.DB_PORT,
     })
     .promise();
-  db.getConnection()
-    .then((conn) => {
-      console.log("Connected to MySQL DB as ID " + conn.threadId);
-      conn.release();
-    })
-    .catch((err) => console.error("MySQL connection error:", err));
 }
 
 module.exports = db;
