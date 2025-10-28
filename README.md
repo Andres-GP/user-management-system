@@ -1,29 +1,37 @@
-# User Management System
+# 👥 User Management System
 
-A full-featured web application to manage users: create, view, edit, and delete user profiles. This project demonstrates CRUD operations with Node.js, Express, Handlebars, and MySQL, deployed on Render.com.
-
----
-
-## Demo
-
-## Check the live demo here: [User Management System](https://user-management-system-8r1h.onrender.com/)
-
-## Technologies Used
-
-- **Backend:** Node.js, Express
-- **Frontend:** Handlebars, HTML5, CSS3, Font Awesome
-- **Database:** MySQL
-- **Deployment:** Render.com
-- **Version Control:** Git & GitHub
+A full-featured web app for managing users — create, view, edit, and delete user profiles.  
+Built with **Node.js**, **Express**, **MySQL**, and **Handlebars**, this project demonstrates complete CRUD operations with a modern UI.
 
 ---
 
-## Features
+## 🚀 Live Demo
 
-- Create new users with validation
-- View all users in a table format
-- Search users by first or last name
-- Edit user profiles
-- Delete users with confirmation prompts
-- Dynamic alerts for create, update, and delete operations
-- Fully responsive design
+👉 [View Live App](https://user-management-system-8r1h.onrender.com/)
+
+---
+
+## ✨ Features
+
+- 🧾 **Create, edit, delete, and view users** with validation.
+- 🔍 **Search users** by first or last name.
+- ⚠️ **Confirmation prompts** for deletions.
+- 🔔 **Dynamic alerts** for CRUD operations.
+- 📱 **Responsive UI** with Handlebars templates.
+
+---
+
+## 🧰 Tech Stack
+
+| Category         | Technology             |
+| ---------------- | ---------------------- |
+| **Backend**      | Node.js, Express       |
+| **Frontend**     | Handlebars, HTML, CSS  |
+| **Database**     | MySQL                  |
+| **UI**           | Font Awesome, Handlebars |
+| **Testing**      | Jest                   |
+| **Deployment**   | Render.com             |
+| **Versioning**   | Git + GitHub           |
+
+---
+
