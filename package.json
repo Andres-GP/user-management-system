@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --config eslint.config.cjs"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,8 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
     "jest": "^30.2.0",
     "nodemon": "^2.0.20",
     "supertest": "^7.1.4"
